@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOMEZEE | فروشگاه لوازم دوری و آشپزخانه</title>
+
+  <!-- فونت فارسی وزیرمتن (در صورت نبود اینترنت، Tahoma جایگزین می‌شود) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- بخش ۱: اسلایدر ۵ محصول جدید (با جاوااسکریپت ساخته می‌شود) -->
+  <section id="hero" class="hero" aria-label="جدیدترین محصولات"></section>
+
+  <!-- بخش ۲: منوی سایت (بعد از اسلایدر، با اسکرول بالای صفحه می‌چسبد) -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- بخش ۳: محصولات تخفیف‌خورده با شمارنده معکوس -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">تخفیف‌های ویژه</h2>
+        <div id="deals" class="deals-grid"></div>
+      </div>
+    </section>
+
+    <!-- بخش ۴: دسته‌بندی‌های مادر در ماتریس ۳ در ۳ -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">دسته‌بندی محصولات</h2>
+        <div id="categories" class="cat-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- بخش ۵: فوتر و اطلاعات تماس -->
+  <div id="site-footer"></div>
+
+  <!-- اسکریپت‌ها: اول داده‌ها، بعد کدهای مشترک -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* اجرای بخش‌های صفحه اصلی */
+    renderHeroSlider();
+    renderNavbar("home");
+    renderDeals();
+    renderCategories();
+    renderFooter();
+  </script>
+</body>
+</html>
