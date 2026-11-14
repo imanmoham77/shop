@@ -15,7 +15,7 @@ const STORE = {
     phone: "05157724569",
     email: "info@homzee.com",
     instagram: "https://instagram.com/homzee1595",
-    eitaa: "https://eitaa.com/zarfomarfeli",
+    eitaa: "https://eitaa.com/homeeli64",
     telegram: "https://t.me/homzee",
     rubika: "https://rubika.ir/homzee"
   }
