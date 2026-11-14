@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فروشگاه | HOMEZEE</title>
+
+  <!-- فونت فارسی وزیرمتن -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- منوی سایت -->
+  <header id="site-header"></header>
+
+  <!-- عنوان صفحه -->
+  <section class="page-head">
+    <div class="container">
+      <h1>فروشگاه</h1>
+      <p>لوازم دوری، آشپزخانه و اکسسوری خانه</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <!-- فیلتر دسته‌بندی و زیردسته (با جاوااسکریپت ساخته می‌شود) -->
+      <div id="filters"></div>
+      <p id="result-count" class="result-count"></p>
+
+      <!-- شبکه محصولات: ماتریس ۳ در ۳ -->
+      <div id="product-grid" class="product-grid"></div>
+
+      <!-- شماره صفحه‌ها -->
+      <div id="pagination" class="pagination"></div>
+    </div>
+  </main>
+
+  <!-- پنجره جزئیات محصول -->
+  <dialog id="product-modal" class="modal"></dialog>
+
+  <!-- پیام کوتاه «به سبد اضافه شد» -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- فوتر -->
+  <div id="site-footer"></div>
+
+  <!-- اسکریپت‌ها: داده‌ها، کدهای مشترک، منطق فروشگاه -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

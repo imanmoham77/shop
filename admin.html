@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- این صفحه نباید در گوگل دیده شود -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>پنل مدیریت | HOMEZEE</title>
+
+  <!-- فونت فارسی وزیرمتن -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin">
+
+  <!-- نوار بالای پنل مدیریت -->
+  <header class="admin-bar">
+    <div class="container">
+      <a href="index.html" class="logo">HOME<span>ZEE</span> <small>پنل مدیریت</small></a>
+      <div class="admin-actions">
+        <a class="btn btn-outline btn-sm" href="index.html" target="_blank">مشاهده سایت</a>
+        <button class="btn btn-sm" data-export>دانلود data.js</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+
+      <!-- پیام وضعیت: تغییرات ذخیره‌نشده روی سایت -->
+      <div id="admin-banner"></div>
+
+      <!-- تب‌ها: محصولات | دسته‌بندی‌ها | تنظیمات فروشگاه -->
+      <div class="tabs" id="admin-tabs">
+        <button class="tab active" data-tab="products">محصولات</button>
+        <button class="tab" data-tab="categories">دسته‌بندی‌ها</button>
+        <button class="tab" data-tab="settings">تنظیمات فروشگاه</button>
+      </div>
+
+      <!-- محتوای تب انتخاب‌شده (با جاوااسکریپت ساخته می‌شود) -->
+      <div id="admin-root"></div>
+    </div>
+  </main>
+
+  <!-- پنجره افزودن/ویرایش محصول و دسته -->
+  <dialog id="admin-dialog" class="modal admin-dialog"></dialog>
+
+  <!-- داده‌های فعلی سایت، سپس منطق پنل -->
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
