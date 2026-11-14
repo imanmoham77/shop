@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تماس با ما | HOMEZEE</title>
+
+  <!-- فونت فارسی وزیرمتن -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- منوی سایت -->
+  <header id="site-header"></header>
+
+  <!-- عنوان صفحه -->
+  <section class="page-head">
+    <div class="container">
+      <h1>تماس با ما</h1>
+      <p>هر سوالی دارید، از یکی از راه‌های زیر با ما در ارتباط باشید.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+
+      <!-- کارت‌های راه‌های ارتباطی (از فایل data.js ساخته می‌شوند) -->
+      <div id="contact-grid" class="contact-grid"></div>
+
+      <!-- ساعت پاسخگویی (نمونه؛ با ساعت واقعی خودتان جایگزین کنید) -->
+      <div class="hours">
+        <h3>ساعت پاسخگویی</h3>
+        <p>شنبه تا پنجشنبه، ۹ صبح تا ۹ شب</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- فوتر -->
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* ساخت کارت‌های تماس از روی اطلاعات STORE در data.js
+       برای تغییر شماره یا آیدی‌ها فقط data.js را ویرایش کنید */
+    const c = STORE.contact;
+    const items = [
+      ["موبایل", c.mobile, "tel:" + c.mobile],
+      ["تلفن ثابت", c.phone, "tel:" + c.phone],
+      ["ایمیل", c.email, "mailto:" + c.email],
+      ["اینستاگرام", "@homzee", c.instagram],
+      ["ایتا", "@zarfomarfeli", c.eitaa],
+      ["تلگرام", "@homzee", c.telegram],
+      ["روبیکا", "@homzee", c.rubika]
+    ];
+    document.getElementById("contact-grid").innerHTML = items.map(([label, text, href]) => `
+      <a class="contact-card" href="${href}" ${href.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}>
+        <small>${label}</small>
+        <strong dir="ltr">${text}</strong>
+      </a>`).join("");
+
+    renderNavbar("contact");
+    renderFooter();
+  </script>
+</body>
+</html>
