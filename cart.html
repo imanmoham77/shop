@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سبد خرید | HOMEZEE</title>
+
+  <!-- فونت فارسی وزیرمتن -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- منوی سایت -->
+  <header id="site-header"></header>
+
+  <!-- عنوان صفحه -->
+  <section class="page-head">
+    <div class="container">
+      <h1>سبد خرید</h1>
+      <p>کالاها را بررسی کنید و مشخصات خود را برای صدور فاکتور وارد کنید.</p>
+    </div>
+  </section>
+
+  <!-- محتوای سبد خرید (با جاوااسکریپت ساخته می‌شود) -->
+  <main class="section">
+    <div class="container" id="cart-root"></div>
+  </main>
+
+  <!-- فوتر -->
+  <div id="site-footer"></div>
+
+  <!-- کتابخانه‌های ساخت PDF (از اینترنت بارگذاری می‌شوند):
+       html2canvas: گرفتن تصویر از فاکتور | jsPDF: ساخت فایل PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- اسکریپت‌ها: داده‌ها، کدهای مشترک، منطق سبد خرید -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
