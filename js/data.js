@@ -55,7 +55,7 @@ const PRODUCTS = [
   { id: 1, name: "بشقاب سرامیکی ساده", category: "ceramic", sub: "بشقاب",
     price: 180000, stock: 25, colors: ["سفید","طوسی"],
     description: "بشقاب سرامیکی مقاوم با طراحی مینیمال.",
-    image: "images/1", isNew: true,
+    image: "images/p1.jpg", isNew: true,
     discount: 20, discountEnds: new Date("2026-11-07T02:02:00+03:30").getTime() },
 
   { id: 2, name: "ماگ سرامیکی بنفش", category: "ceramic", sub: "لیوان و ماگ",
